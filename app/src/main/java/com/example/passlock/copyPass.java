@@ -35,6 +35,9 @@ public class copyPass extends AppCompatActivity {
         if (cursor.getCount() == 0)
         {
             Toast.makeText(this, "No Data to show", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+            intent.putExtra("username", user);
+            startActivity(intent);
         }
         else
         {
